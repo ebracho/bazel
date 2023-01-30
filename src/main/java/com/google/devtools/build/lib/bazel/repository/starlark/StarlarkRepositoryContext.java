@@ -843,6 +843,9 @@ public class StarlarkRepositoryContext
       throws RepositoryFunctionException, InterruptedException, EvalException {
     Map<URI, Map<String, String>> authHeaders = getAuthHeaders(getAuthContents(auth, "auth"));
 
+    sha256 = "";
+    integrity = "";
+
     List<URL> urls =
         getUrls(
             url,
